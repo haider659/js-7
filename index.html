@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+
+
+<!--Q1-->
+
+<!-- <a onclick="alert('hello')" href="#">google</a> -->
+
+
+<!--Q2-->
+
+
+<!-- 
+ <style>
+    .image-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.image-container img {
+    width: 200px;
+    margin: 10px;
+    cursor: pointer;
+}
+</style>
+<div class="image-container">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSvYesw8w3WprRewRFMzPpJXA_ZC5BZBh4Jojra7_4Myw&s" alt="Mobile 1" onclick="showMessage('You clicked Mobile 1')">
+    <img src="https://www.pakmobizone.pk/wp-content/uploads/2023/10/Club-Mobile-14-PRO-MAX-Silver-1-966x1024.jpg" alt="Mobile 2" onclick="showMessage('You clicked Mobile 2')">
+    <img src="https://img.etimg.com/photo/msid-101297745,imgsize-63600/OnePlus11R5G.jpg" alt="Mobile 3" onclick="showMessage('You clicked Mobile 3')">
+    
+</div>
+<script>
+    function showMessage(message) {
+    alert(message);
+}
+</script>  -->
+
+<!--Q3-->
+
+<!-- <style>
+    table {
+    border-collapse: collapse;
+    width: 100%;
+}
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+th {
+    background-color: #f2f2f2;
+}
+</style>
+<table id="student-table">
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Action</th>
+        </tr>
+        
+        <tr>
+            <td>0</td>
+            <td>John Doe</td>
+            <td>10</td>
+            <td><button onclick="deleteRow(this)">Delete</button></td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>Jane Smith</td>
+            <td>9</td>
+            <td><button onclick="deleteRow(this)">Delete</button></td>
+        </tr>
+        
+        <tr>
+            <td>2</td>
+            <td>Mark</td>
+            <td>10</td>
+            <td><button onclick="deleteRow(this)">Delete</button></td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>james</td>
+            <td>8</td>
+            <td><button  onclick="deleteRow(this)">Delete</button></td>
+        </tr>
+    </table>
+<script>
+    function deleteRow(btn) {
+    var row = btn.parentNode.parentNode;
+    row.parentNode.removeChild(row);
+}
+</script> -->
+
+<!--Q4-->
+    <!-- <img onmouseover="src='https:/imageio.forbes.com/specials-images/imageserve/5d35eacaf1176b0008974b54/0x0.jpg?format=jpg&crop=4560,2565,x790,y784,safe&height=900&width=1600&fit=bounds'" 
+         onmouseout="src='https:/images.pexels.com/photos/210019/pexels-photo-210019.jpeg?cs=srgb&dl=pexels-pixabay-210019.jpg&fm=jpg'"
+    width="300"  src="https://images.pexels.com/photos/210019/pexels-photo-210019.jpeg?cs=srgb&dl=pexels-pixabay-210019.jpg&fm=jpg" alt="">  -->
+
+<!--Q5-->
+<!-- <p>Counter: <span id="counter">0</span></p>
+<button onclick="increaseCounter()">Increase</button>
+<button onclick="decreaseCounter()">Decrease</button>
+<script>
+        
+  function increaseCounter() {
+    var counterElement = document.getElementById("counter");
+    var currentValue = parseInt(counterElement.textContent);
+    counterElement.textContent = currentValue + 1;
+}
+    function decreaseCounter() {
+    var counterElement = document.getElementById("counter");  
+      var currentValue = parseInt(counterElement.textContent);    
+       counterElement.textContent = currentValue - 1;
+ }
+</script> -->
+
+
+<!--Q1-->
+<!-- <form id="signupForm" onsubmit="submitForm(event)">
+        <input type="text" id="name" name="name" placeholder="Your Name" required><br><br>
+        <input type="text" id="age" name="age" placeholder="Your Age" required><br><br>
+        <input type="email" id="email" name="email" placeholder="Your Email" required><br><br>
+        <input type="submit" value="Sign Up">
+</form>
+<div class="output" id="output"></div>
+    <script>
+        function submitForm(event) {
+            event.preventDefault();
+        
+           
+            var name = document.getElementById("name").value;
+            var email = document.getElementById("email").value;
+            var age = document.getElementById("age").value;
+        
+            
+            var outputDiv = document.getElementById("output");
+            outputDiv.innerHTML = "<p>Name: " + name + "</p><p>Age: " + age + "</p><p>Email: " + email + "</p>";
+        }
+    </script> -->
+
+<!--Q2--> 
+<!-- <style>
+    body {
+        font-family: Arial, sans-serif;
+    }
+    .item {
+        margin-bottom: 20px;
+        border: 1px solid #ccc;
+        padding: 10px;
+    }
+    .item .details {
+        display: none;
+    }
+    .item .read-more {
+        cursor: pointer;
+        color: blue;
+    }
+</style>     
+<div class="item">
+    <h2>Item 1</h2>
+    <p>Short description of Item 1.</p>
+    <div class="details">
+        <p>Full details of Item 1.</p>
+        <p>Additional information about Item 1.</p>
+    </div>
+    <p class="read-more" onclick="toggleDetails(this)">Read more</p>
+</div>
+<div class="item">
+    <h2>Item 2</h2>
+    <p>Short description of Item 2.</p>
+    <div class="details">
+        <p>Full details of Item 2.</p>
+        <p>Additional information about Item 2.</p>
+    </div>
+    <p class="read-more" onclick="toggleDetails(this)">Read more</p>
+</div>
+<script>
+function toggleDetails(element) {
+    var details = element.parentNode.querySelector('.details');
+    if (details.style.display === 'none' || details.style.display === '') {
+        details.style.display = 'block';
+        element.textContent = 'Read less';
+    } else {
+        details.style.display = 'none';
+        element.textContent = 'Read more';
+    }
+}
+</script> -->
+
+</body>
+</html>
